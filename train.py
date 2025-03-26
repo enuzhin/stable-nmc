@@ -32,7 +32,7 @@ def main(cfg: DictConfig):
         batch_size=cfg.batch_size,
         num_workers=cfg.num_workers,
         cfg = cfg,
-        noise_and_cut = cfg.model.noise_and_cut
+        enable_noise_and_clamp = cfg.model.enable_noise_and_clamp
     )
 
 if __name__ == "__main__":
