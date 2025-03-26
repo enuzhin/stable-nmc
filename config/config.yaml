@@ -1,0 +1,23 @@
+
+# Model to train
+defaults:
+  - model: feed_forward # res_net or feed_forward
+  - _self_
+
+# Dataset settings
+dataset:
+  name: "MNIST"
+  normalize_mean: 0.1307
+  normalize_std: 0.3081
+
+# General settings
+num_epochs: 2048  # Number of training epochs
+batch_size: 1024  # Mini-batch size
+num_workers: 24  # Number of data loading workers
+
+# Model saving settings
+save:
+  path: "checkpoints"  # Where to save models
+  save_every: 10  # Save model every N epochs
+  log_every: 100 # Log data every N weight update steps
+  wandb_mode: online # online/offline/disabled

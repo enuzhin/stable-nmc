@@ -1,0 +1,11 @@
+# Optimizer settings
+optimizer:
+  type: "adam"  # "adam"
+  lr: 0.001  # Learning rate
+
+# Model parameters
+type: "NoisyResNet"  # "NoisyFeedForward", "NoisyResNet"
+scale: 10
+w_max: 1
+noise_spread: 1
+enable_noise_and_clamp: true
