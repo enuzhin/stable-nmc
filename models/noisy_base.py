@@ -16,8 +16,8 @@ class NoisyBase(nn.Module):
           b = min(w_max, param + noise_spread/2)
           theta = a + u * (b - a), where u ~ U(0,1)
         """
-        a = torch.clamp(param - self.noise_spread / 2, min=0)
-        b = torch.clamp(param + self.noise_spread / 2, max=self.w_max)
+        a = torch.clamp(param - self.noise_spread / 2, min=0, max=self.w_max)
+        b = torch.clamp(param + self.noise_spread / 2, min=0, max=self.w_max)
         u = torch.rand_like(param)
         return a + u * (b - a)
 
