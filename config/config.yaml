@@ -1,14 +1,12 @@
 
 # Model to train
 defaults:
-  - model: feed_forward # res_net or feed_forward
+  - model: res_net # res_net or feed_forward
   - _self_
 
 # Dataset settings
 dataset:
   name: "MNIST"
-  normalize_mean: 0.1307
-  normalize_std: 0.3081
 
 # General settings
 num_epochs: 2048  # Number of training epochs
