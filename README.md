@@ -1,8 +1,18 @@
 # Stability-aware Neuromorphic Computing
 
-This project includes training on the MNIST dataset. The neural network was trained with noisy weights constrained to positive values within a limited range. Nevertheless, it achieved reliable accuracy.
+This repository presents a model trained on the MNIST dataset. The neural network was trained under extreme noise condition and weights constrained to positive values within a limited range. Nevertheless, it achieved reliable accuracy.
 
-This repository contains a machine learning project that represents the results of the paper.
+The model is inspired by the inherent noise observed in memristive devices, which have the potential to serve as power-efficient physical representations of neural network weights in the neuromorphic computing paradigm.
+
+The table below summarizes the performance of different models trained with and without hardware-inspired weights constraints:
+
+| Model             | Percentage Error (%) | Accuracy (%) | Trainable Parameters | Cross-Entropy Loss |
+|------------------|----------------------|--------------|----------------------|---------------------|
+| NoisyResNet       | 0.33                 | 99.67        | 8,008,980            | 0.00051             |
+| ResNet            | 0.31                 | 99.69        | 3,662,100            | 0.00051             |
+| NoisyFeedForward  | 1.10                 | 98.90        | 8,008,980            | 0.00054             |
+| FeedForward       | 0.62                 | 99.38        | 3,662,100            | 0.00052             |
+
 
 ## Project Structure
 
@@ -62,4 +72,6 @@ where `<model_type>` is `res_net` or `feed_forward`.
 ## Publication
 
 The related publication will be available soon.
+
+
 
