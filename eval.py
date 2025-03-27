@@ -34,6 +34,8 @@ def main(cfg: DictConfig):
 
     criterion = nn.CrossEntropyLoss()
 
+    print("Parameters total: ",sum(p.numel() for p in model.parameters()))
+
     eval(
         model=model,
         device=device,
